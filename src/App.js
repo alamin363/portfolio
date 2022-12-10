@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Pages/Shared/Router";
+import { Box, CssBaseline } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Box sx={{
+      my:"auto"
+    }}>
+    {/* <CssBaseline /> */}
+    <RouterProvider router={router}></RouterProvider>
+    </Box>
   );
 }
 
