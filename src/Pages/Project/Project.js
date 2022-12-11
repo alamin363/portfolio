@@ -22,10 +22,10 @@ const Project = ({ projects = [1,2,3] }) => {
             id=""
             key=""
             url="https://github.com/alamin363/portfolio"
-            projectImage="https://www.facebook.com/stories/525670679206832/?source=story_tray"
-            projectTitle="Sampole Project"
-            description="This is a sampole project lorem saklfjsdfnds fklsdfj"
-            technologies="mongodb react reduxed bal bala"
+            projectImage="https://react-photo-view.vercel.app/_next/static/media/1.c788857d.jpg"
+            projectTitle="Home Cooking"
+            description="This is a Cooking website . a person sell cooking product and sell this product . this website targeted a single parson she sell cooking in home flaver . this is happiness"
+            technologies="mongodb react firebase github etc."
           />
         ))}
       </div>

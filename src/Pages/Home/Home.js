@@ -28,6 +28,7 @@ import {
 } from "react-icons/si";
 import FaceBookCard from "../FaceBookCard/FaceBookCard";
 import { border } from "@mui/system";
+import { FaTruckLoading } from "react-icons/fa";
 
 const Home = () => {
   const [display, setDisplay] = useState(false);
@@ -159,7 +160,7 @@ const Home = () => {
           <FaceBookCard
             image={resume}
             title="MY RESUME"
-            url="https://docs.google.com/document/d/1a0i0Dser2Xx5iBMc_nxjZD0ccZGtz1YAuzuReINHsc8/edit?usp=share_link"
+            url="https://docs.google.com/document/d/1a0i0Dser2Xx5iBMc_nxjZD0ccZGtz1YAuzuReINHsc8/edit?usp=sharing"
           />
         </Box>
       </div>
@@ -227,7 +228,7 @@ const Home = () => {
         background:"#fff"
       }}>
         <Link to="/admin">SEE ADMIN </Link>
-        <Typography variant="h3">Project is Updated...</Typography>
+        <Typography variant="h3">Admin  <FaTruckLoading /> is Updated...</Typography>
       </Box>
     </div>
   );
