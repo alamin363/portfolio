@@ -73,36 +73,37 @@ const Home = () => {
     scene.background = spaceTexture;
 
     const constSpeed = 0.01;
-    window.addEventListener("mousemove", (e) => {
-      if (e.clientX <= window.innerWidth / 2) {
-        moon.rotation.x -= constSpeed;
-        moon.rotation.y += constSpeed;
-        venus.rotation.x -= constSpeed;
-        venus.rotation.y += constSpeed;
-      }
+    // window.addEventListener("mousemove", (e) => {
+    //   if (e.clientX <= window.innerWidth / 2) {
+    //     moon.rotation.x -= constSpeed;
+    //     moon.rotation.y += constSpeed;
+    //     venus.rotation.x -= constSpeed;
+    //     venus.rotation.y += constSpeed;
+    //   }
 
-      if (e.clientX > window.innerWidth / 2) {
-        moon.rotation.x -= constSpeed;
-        moon.rotation.y -= constSpeed;
-        venus.rotation.x -= constSpeed;
-        venus.rotation.y -= constSpeed;
-      }
+    //   if (e.clientX > window.innerWidth / 2) {
+    //     moon.rotation.x -= constSpeed;
+    //     moon.rotation.y -= constSpeed;
+    //     venus.rotation.x -= constSpeed;
+    //     venus.rotation.y -= constSpeed;
+    //   }
 
-      if (e.clientY > window.innerHeight / 2) {
-        moon.rotation.x -= constSpeed;
-        moon.rotation.y += constSpeed;
-        venus.rotation.x -= constSpeed;
-        venus.rotation.y += constSpeed;
-      }
+    //   if (e.clientY > window.innerHeight / 2) {
+    //     moon.rotation.x -= constSpeed;
+    //     moon.rotation.y += constSpeed;
+    //     venus.rotation.x -= constSpeed;
+    //     venus.rotation.y += constSpeed;
+    //   }
 
-      if (e.clientY <= window.innerHeight / 2) {
-        moon.rotation.x -= constSpeed;
-        moon.rotation.y -= constSpeed;
-        venus.rotation.x -= constSpeed;
-        venus.rotation.y -= constSpeed;
-      }
-    });
-
+    //   if (e.clientY <= window.innerHeight / 2) {
+    //     moon.rotation.x -= constSpeed;
+    //     moon.rotation.y -= constSpeed;
+    //     venus.rotation.x -= constSpeed;
+    //     venus.rotation.y -= constSpeed;
+    //   }
+    // });
+    
+    
     const animate = () => {
       requestAnimationFrame(animate);
       moon.rotation.y += 0.001;
@@ -117,20 +118,43 @@ const Home = () => {
       camera.rotation.z = window.scrollY * 0.001;
       camera.rotation.y = window.scrollY * 0.003;
 
-      // const skillsBox = document.getElementById("homeskillsBox");
+      const skillsBox = document.getElementById("homeSkillsBox");
 
-      // if (window.scrollY > 1500) {
-      //   skillsBox.style.animationName = "homeskillsBoxAnimationOn";
-      // } else {
-      //   skillsBox.style.animationName = "homeskillsBoxAnimationOff";
-      // }
+      if (window.scrollY > 1400) {
+        skillsBox.style.animationName = "homeSkillsBoxAnimationOn";
+      } else {
+        skillsBox.style.animationName = "homeSkillsBoxAnimationOff";
+      }
     });
   }, []);
-
   return (
     <div className="home">
       <canvas className="homeCanvas"></canvas>
+      <div className="homeCanvasContainer">
+        <Typography variant="h1">
+          <p>A</p>
+          <p>L</p>
+          <p>A</p>
+          <p>M</p>
+          <p>I</p>
+          <p>N</p>
+          <p>P</p>
+          <p>K</p>
+        </Typography>
 
+        <div className="homeCanvasBox">
+          <Typography variant="h2">REACT DEVELOPER</Typography>
+          <Typography variant="h2">JAVASCRIPT DEVELOPER</Typography>
+          <Typography variant="h2">MERN STACK DEVELOPER</Typography>
+          <Typography variant="h2">LEARNER</Typography>
+        </div>
+
+        <Link to="/project">VIEW WORK</Link>
+      </div>
+
+      <div className="homeScrollBtn">
+        <MouseOutlined />
+      </div>
       <div className="homeContainer">
         <Typography variant="h3">TIMELINE</Typography>
         <TimeLine timelines={[1, 2]} />
@@ -187,7 +211,7 @@ const Home = () => {
           </div>
         </div>
         <div className="cubeShadow"></div>
-        <div className="homeSkillsBox">
+        <div className="homeSkillsBox" id="homeSkillsBox">
           <SiHtml5 />
           <SiCss3 />
           <SiJavascript />
@@ -201,7 +225,7 @@ const Home = () => {
       <div className="homeYoutube">
         <Typography variant="h3"> BEST POSTS</Typography>
 
-        <div className="homeYoutubeWrapper">
+        <div className="homeFacebookWrapper">
           <FaceBookCard
             image="https://media-exp1.licdn.com/dms/image/C5622AQE7fu2Lpded3g/feedshare-shrink_800/0/1670576653556?e=1673481600&v=beta&t=Lq1MNYvxzCvq08e93I5R0Mx76tByF60DKcWhAmDmCqs"
             title="CHECK OUT NOW"
@@ -224,11 +248,15 @@ const Home = () => {
           />
         </div>
       </div>
-      <Box sx={{
-        background:"#fff"
-      }}>
+      <Box
+        sx={{
+          background: "#fff",
+        }}
+      >
         <Link to="/admin">SEE ADMIN </Link>
-        <Typography variant="h3">Admin  <FaTruckLoading /> is Updated...</Typography>
+        <Typography variant="h3">
+          Admin <FaTruckLoading /> is Updateding...
+        </Typography>
       </Box>
     </div>
   );

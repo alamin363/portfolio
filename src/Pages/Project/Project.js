@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography } from "@mui/material";
 import "./Project.css";
 import { AiOutlineProject } from "react-icons/ai";
@@ -10,6 +10,8 @@ import  ProjectCard  from "../../component/ProjectCard/ProjectCard";
 
 
 const Project = ({ projects = [1,2,3] }) => {
+
+
   return (
     <div className="projects">
       <Typography variant="h3">

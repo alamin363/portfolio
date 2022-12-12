@@ -6,19 +6,20 @@ import { FaCode } from "react-icons/fa";
 import "./About.css";
 
 const About = () => {
-  const { data, status, isLoading } = useQuery({
-    queryKey: ["data"],
-    queryFn: () =>
-      fetch("http://localhost:5000/user").then((res) => res.json()),
-  });
-  console.log(data, "status", status);
-  if (isLoading) {
-    return (
-      <Box sx={{ display: "flex", height: "100vh", width: "100%" }}>
-        <CircularProgress />
-      </Box>
-    );
-  }
+  
+  // const { data, status, isLoading } = useQuery({
+  //   queryKey: ["data"],
+  //   queryFn: () =>
+  //     fetch("http://localhost:5000/user").then((res) => res.json()),
+  // });
+  // console.log(data, "status", status);
+  // if (isLoading) {
+  //   return (
+  //     <Box sx={{ display: "flex", height: "100vh", width: "100%" }}>
+  //       <CircularProgress />
+  //     </Box>
+  //   );
+  // }
   return (
     <div className="about">
       <div className="aboutContainer">
