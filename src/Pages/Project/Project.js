@@ -4,14 +4,9 @@ import "./Project.css";
 import { AiOutlineProject } from "react-icons/ai";
 
 import { FaRegSmileWink } from "react-icons/fa";
-import  ProjectCard  from "../../component/ProjectCard/ProjectCard";
+import ProjectCard from "../../component/ProjectCard/ProjectCard";
 
-
-
-
-const Project = ({ projects = [1,2,3] }) => {
-
-
+const Project = ({ projects = [1, 2, 3] }) => {
   return (
     <div className="projects">
       <Typography variant="h3">
