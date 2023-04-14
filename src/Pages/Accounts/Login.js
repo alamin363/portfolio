@@ -9,25 +9,13 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const dispatch = useDispatch();
-  // const alert = useAlert();
-  // const { loading, message, error } = useSelector((state) => state.login);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // dispatch(login(email, password));
+    
   };
 
-  // useEffect(() => {
-  //   if (error) {
-  //     alert.error(error);
-  //     dispatch({ type: "CLEAR_ERRORS" });
-  //   }
-  //   if (message) {
-  //     alert.success(message);
-  //     dispatch({ type: "CLEAR_MESSAGE" });
-  //   }
-  // }, [alert, error, message, dispatch]);
+
 
   return (
     <div className="login">

@@ -21,29 +21,33 @@ const ProjectCard = ({
   return (
     <>
       <a className="projectCard" href={url} target="black">
-      <div>
-        <PhotoProvider>
-          <PhotoView src={projectImage}>
-            <img style={{width:"300px"}} className="img" src={projectImage} alt="" />
-          </PhotoView>
-        </PhotoProvider>
+        <div>
+          <PhotoProvider>
+            <PhotoView src={projectImage}>
+              <img
+                style={{ width: "300px" }}
+                className="img"
+                src={projectImage}
+                alt=""
+              />
+            </PhotoView>
+          </PhotoProvider>
 
-        <Typography variant="h5">{projectTitle}</Typography>
-      </div>
-      <div>
-        <Typography variant="h4"> About Project</Typography>
-        <Typography>{description}</Typography>
-        <Typography variant="h6">Tech Stack: {technologies}</Typography>
-      </div>
-</a>
-      {/* {isAdmin && ( */}
-      <Button
-        style={{ color: "rgba(40,40,40,0.7)" }}
-        // onClick={() => deleteHandler(id)}
-      >
-        <Delete />
-      </Button>
-      {/* )} */}
+          <Typography variant="h5">{projectTitle}</Typography>
+        </div>
+        <div>
+          <Typography variant="h4"> About Project</Typography>
+          <Typography>{description}</Typography>
+          <Typography variant="h6">Tech Stack: {technologies}</Typography>
+        </div>
+      </a>
+      {/* {isAdmin && ( 
+       <Button
+        style={{ color: "rgba(40,40,40,0.7)" }}   onClick={() => deleteHandler(id)} 
+      {/* > */}
+      {/* <Delete />
+      </Button> 
+       )} */}
     </>
   );
 };

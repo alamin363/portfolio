@@ -62,7 +62,7 @@
 }
 
 .projectCard > div:first-child::after {
-  content: "VIEW DEMO";
+  content: "VIEW PROJECT";
   width: 100%;
   height: 100%;
   font: 100 2rem "Roboto";

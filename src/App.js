@@ -8,15 +8,15 @@ import { getUser } from "./Actions/User";
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    
-  },[dispatch])
+  useEffect(() => {}, [dispatch]);
   return (
-    <Box sx={{
-      my:"auto"
-    }}>
-    {/* <CssBaseline /> */}
-    <RouterProvider router={router}></RouterProvider>
+    <Box
+      sx={{
+        my: "auto",
+      }}
+    >
+      {/* <CssBaseline /> */}
+      <RouterProvider router={router}></RouterProvider>
     </Box>
   );
 }

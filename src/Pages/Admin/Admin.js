@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./Admin.css";
 import { Button, Typography } from "@mui/material";
 import { AiOutlineProject } from "react-icons/ai";
@@ -6,12 +6,10 @@ import { FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdTimeline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-
 const Admin = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
+    window.scrollTo(0, 0);
+  }, []);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,14 +19,9 @@ const Admin = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // dispatch(updateUser(name, email, password, skills, about));
-
-    // console.log(name, email, password, skills, about);
   };
 
-  const logoutHandler = () => {
-    
-  };
+  const logoutHandler = () => {};
 
   const handleAboutImage = (e) => {
     const file = e.target.files[0];
@@ -72,7 +65,6 @@ const Admin = () => {
       }
     };
   };
-
 
   return (
     <div className="adminPanel">

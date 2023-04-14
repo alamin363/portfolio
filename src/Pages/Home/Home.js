@@ -102,8 +102,7 @@ const Home = () => {
     //     venus.rotation.y -= constSpeed;
     //   }
     // });
-    
-    
+
     const animate = () => {
       requestAnimationFrame(animate);
       moon.rotation.y += 0.001;
@@ -137,8 +136,7 @@ const Home = () => {
           <p>A</p>
           <p>M</p>
           <p>I</p>
-          <p>N</p>
-          <p>P</p>
+          <p>N</p>.<p>P</p>
           <p>K</p>
         </Typography>
 
@@ -157,7 +155,7 @@ const Home = () => {
       </div>
       <div className="homeContainer">
         <Typography variant="h3">TIMELINE</Typography>
-        <TimeLine timelines={[1, 2]} />
+        <TimeLine timelines={[1]} />
 
         <Box
           sx={{
@@ -165,9 +163,11 @@ const Home = () => {
             top: 0,
             right: 0,
             display: `${display && "none"}`,
+
+            border: "3px solid #000",
           }}
         >
-          <Button
+          {/* <Button
             onClick={() => setDisplay(!display)}
             sx={{
               height: "50px",
@@ -180,12 +180,16 @@ const Home = () => {
             }}
           >
             X
-          </Button>
-          <FaceBookCard
-            image={resume}
-            title="MY RESUME"
-            url="https://docs.google.com/document/d/1a0i0Dser2Xx5iBMc_nxjZD0ccZGtz1YAuzuReINHsc8/edit?usp=sharing"
-          />
+          </Button> */}
+          {/* 
+          <a href="https://drive.google.com/file/d/14KuhVW841e7fvZ54_uvQVAS1Z8ivBisK/view?usp=sharing">
+            <img
+              style={{ width: "50px", height: "50px" }}
+              src={resume}
+              alt=""
+            />
+            <Typography>My Resume</Typography>
+          </a> */}
         </Box>
       </div>
       <div className="homeSkills">
@@ -226,17 +230,31 @@ const Home = () => {
         <Typography variant="h3"> BEST POSTS</Typography>
 
         <div className="homeFacebookWrapper">
-          <FaceBookCard
-            image="https://media-exp1.licdn.com/dms/image/C5622AQE7fu2Lpded3g/feedshare-shrink_800/0/1670576653556?e=1673481600&v=beta&t=Lq1MNYvxzCvq08e93I5R0Mx76tByF60DKcWhAmDmCqs"
-            title="CHECK OUT NOW"
-            url="https://www.linkedin.com/feed/update/urn:li:activity:7006906343236259840/"
-          />
-          <FaceBookCard
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/BihZd2x8Qh8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          {/* <FaceBookCard
             image="https://media-exp1.licdn.com/dms/image/C5622AQE1hwFgcZ3JgQ/feedshare-shrink_800/0/1670289819085?e=1673481600&v=beta&t=wrmd6FGtfYh9fNql2D_1yG4vMUwCjE6ymCu6fOZUmm4"
             title="CHECK OUT NOW"
             url="https://www.linkedin.com/posts/programming-hero-community_webdevelopment-programming-programminghero-activity-7005703273600991232--Bt0?utm_source=share&utm_medium=member_desktop"
           />
-          <FaceBookCard
+         */}
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/AZ0ja83nMVc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          {/* <FaceBookCard
             image="https://media-exp1.licdn.com/dms/image/C5622AQHvQdYStovaPA/feedshare-shrink_800/0/1667887051245?e=1673481600&v=beta&t=dt_xd9C6kBNmUcdPs-aHVSHtKwUAHK_U3U5O6ASaPRc"
             title="CHECK OUT NOW"
             url="https://www.linkedin.com/posts/programming-hero-community_webdevelopment-webprogramming-programminghero-activity-6995625337657192449-90yA?utm_source=share&utm_medium=member_desktop"
@@ -245,19 +263,34 @@ const Home = () => {
             image="https://media-exp1.licdn.com/dms/image/C5622AQEddmh7NiJJLg/feedshare-shrink_800/0/1665947243660?e=1673481600&v=beta&t=yRAxJMF8wUqRKTXL6z5AMnxELkB2iXb8ndPR0CgaIdE"
             title="CHECK OUT NOW"
             url="https://www.linkedin.com/posts/programming-hero-community_programminghero-programming-development-activity-6987489190695370753-FovK?utm_source=share&utm_medium=member_desktop"
-          />
+          /> */}
         </div>
+      </div>
+      <Typography variant="h3" style={{ color: "#fff" }}>
+        Location
+      </Typography>
+
+      <div className="homeFacebookWrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29018.072814319585!2d88.9606757719888!3d24.61475316401468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fc6dc2abc288cf%3A0x80a0d03035f140dc!2sAtrai%20Thana!5e0!3m2!1sen!2sbd!4v1681514699892!5m2!1sen!2sbd"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <Link to="contact">
+          <Typography variant="h3" style={{ color: "#fff" }}>
+            Contact Me
+          </Typography>
+        </Link>
       </div>
       <Box
         sx={{
           background: "#fff",
         }}
-      >
-        <Link to="/admin">SEE ADMIN </Link>
-        <Typography variant="h3">
-          Admin <FaTruckLoading /> is Updateding...
-        </Typography>
-      </Box>
+      ></Box>
     </div>
   );
 };

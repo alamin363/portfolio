@@ -1,12 +1,12 @@
 import { ReactNavbar } from "overlay-navbar";
 import React from "react";
-import logo from "../../images/logome.png";
-import { FaUserAlt } from "react-icons/fa";
+import logo from "../../images/robot1-removebg-preview.png";
+import { FaCode, FaUserAlt } from "react-icons/fa";
 const Navbar = () => {
   return (
     <div>
       <ReactNavbar
-        navColor1="white"
+        // navColor1="white"
         navColor2="hsl(219,  48%, 8%)"
         burgerColor="hsl(250, 100%, 75%)"
         burgerColorHover="hsl(250, 100%, 75%)"
